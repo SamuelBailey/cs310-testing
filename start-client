@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root"
+  exit
+fi
+
+if [ -z "$1" ]; then
+  echo "Pass the number of the namespace to connect from"
+  return 1
+fi
+
+echo "# ip netns exec space$1 python3 client.py 192.168.0.10 4444"
+ip netns exec space$1 python3 client.py 192.168.0.10 4444
