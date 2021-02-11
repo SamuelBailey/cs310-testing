@@ -4,4 +4,4 @@ if [ "$EUID" -ne 0 ]; then
   exit
 fi
 
-ip netns exec space0 python3 server.py 192.168.0.10 4444
+ip netns exec space2 python3 server.py 192.168.0.30 4444
