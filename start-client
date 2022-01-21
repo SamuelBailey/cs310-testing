@@ -9,8 +9,5 @@ fi
 #   return 1
 # fi
 
-echo "Starting client in namespace \"space3\""
-echo "Connecting to ip: 192.168.0.30:4444"
-echo ""
 echo "# ip netns exec space3 python3 client.py 192.168.0.30 4444"
 ip netns exec space3 python3 client.py 192.168.0.30 4444
